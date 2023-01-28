@@ -3,9 +3,12 @@ from sklearn.linear_model import LogisticRegression
 
 import mlflow
 import mlflow.sklearn
+import os
 
 
 if __name__ == "__main__":
+    print("db secret: ", os.environ.get("DB_SECRET"))
+
     X = np.array([-2, -1, 0, 1, 2, 1]).reshape(-1, 1)
     y = np.array([0, 0, 1, 1, 1, 0])
     lr = LogisticRegression()

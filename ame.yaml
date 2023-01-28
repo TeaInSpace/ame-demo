@@ -19,11 +19,9 @@ tasks:
     projectid: sklearn_logistic_regression
     command: mlflow run .
     taskType: Mlflow
-#    secrets:
-#      - envkey: MY_SECRET
-#        source:
-#          vault:
-#            vaultName: vaulta
-#            secretKey: object_storage_secret
-#            secretObject: objecta
-#            secretPath: /dssecrets/
+    secrets:
+      - !VaultSecret
+        envkey: DB_SECRET
+        vaultName: vaulta
+        secretKey: data.password
+        secretPath: internal/data/database/config
