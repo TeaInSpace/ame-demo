@@ -16,8 +16,9 @@ tasks:
     templateRef: shared-templates.logistic_reg_template
     taskType: Mlflow
     secrets:
-      - !VaultSecret
-        envkey: DB_SECRET
-        vaultName: vaulta
-        secretKey: data.password
-        secretPath: internal/data/database/config
+#      - !VaultSecret
+#        envkey: DB_SECRET
+#        envkey: DB_SECRET
+#        vaultName: vaulta
+#        secretKey: data.password
+#        secretPath: internal/data/database/config
