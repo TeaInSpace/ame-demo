@@ -10,14 +10,10 @@ models:
       auto_train: true
       deploy: true
       enable_tls: false
-
 tasks:
   - name: training
-    resources:
-      cpu: 4
-      memory: 4Gi
     projectid: sklearn_logistic_regression
-    command: mlflow run .
+    templateRef: shared-templates.logistic_reg_template
     taskType: Mlflow
     secrets:
       - !VaultSecret
