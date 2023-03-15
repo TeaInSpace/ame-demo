@@ -2,6 +2,8 @@ projectid: sklearn_logistic_regression
 models:
   - name: logreg
     type: mlflow
+    validationTask:
+      taskRef: mlflow_validation
     training: 
       task:
         taskRef: training
@@ -22,3 +24,7 @@ tasks:
 #        vaultName: vaulta
 #        secretKey: data.password
 #        secretPath: internal/data/database/config
+  - name: mlflow_validation
+    projectid: sklearn_logistic_regression
+    runcommand: python validate.py
+
