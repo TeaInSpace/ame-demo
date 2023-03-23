@@ -17,6 +17,7 @@ tasks:
     projectid: sklearn_logistic_regression
     templateRef: shared-templates.logistic_reg_template
     taskType: Mlflow
+    dataSet: [datasetdemo.dataset1]
     secrets:
 #      - !VaultSecret
 #        envkey: DB_SECRET
