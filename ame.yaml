@@ -1,12 +1,14 @@
-projectid: sklearn_logistic_regression
+name: sklearn-logistic-regression
 models:
   - name: logreg
     type: mlflow
     validationTask:
-      taskRef: mlflow_validation
+      taskRef: 
+        name: mlflow_validation
     training: 
       task:
-        taskRef: training
+        taskRef: 
+          name: training
        #schedule: * * 12 *
     deployment:
       auto_train: true
