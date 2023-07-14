@@ -18,7 +18,8 @@ tasks:
   - name: training
     projectid: sklearn_logistic_regression
     templateRef: shared-templates.logistic_reg_template
-    taskType: Mlflow
+    executor:
+      !mlflow
     dataSet: [datasetdemo.dataset1]
     secrets:
 #      - !VaultSecret
