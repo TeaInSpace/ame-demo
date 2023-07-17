@@ -29,6 +29,7 @@ tasks:
 #        secretKey: data.password
 #        secretPath: internal/data/database/config
   - name: mlflow_validation
-    projectid: sklearn_logistic_regression
-    runcommand: python validate.py
+    executor:
+      !pipEnv
+      command: python validate.py
 
