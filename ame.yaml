@@ -20,7 +20,7 @@ tasks:
     templateRef: shared-templates.logistic_reg_template
     executor:
       !mlflow
-    dataSet: [datasetdemo.dataset1]
+    dataSets: [datasetdemo.dataset1]
     secrets:
 #      - !VaultSecret
 #        envkey: DB_SECRET
