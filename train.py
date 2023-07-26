@@ -5,6 +5,7 @@ import mlflow
 import mlflow.sklearn
 from mlflow.models import infer_signature
 import os
+from urllib.parse import urlparse
 
 
 if __name__ == "__main__":
@@ -16,7 +17,7 @@ if __name__ == "__main__":
     lr.fit(X, y)
     score = lr.score(X, y)
     print("Score: %s" % score)
-    signature = infer_signature(train_x, predictions)
+    signature = infer_signature(X, y)
 
     tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
     print("type: ", tracking_url_type_store)
